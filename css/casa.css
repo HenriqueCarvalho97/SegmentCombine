@@ -232,6 +232,7 @@ h3{
 	margin: auto;
 	font-family: 'Open Sans', sans-serif;
 	color: #444;
+	text-transform: uppercase;
 }
 
 .item-value{
