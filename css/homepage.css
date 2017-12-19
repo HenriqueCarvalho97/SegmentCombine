@@ -1,0 +1,303 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+:root{
+    --theme-color: rgb(45, 134, 89);
+	--font: 'Quicksand', sans-serif;
+}
+
+#main{
+	height: auto;
+	width: auto;
+	-webkit-transition: 1s;
+	transition: 1s;
+	margin-left: 0vw;
+}
+
+.page{
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	z-index: 3!important;
+}
+
+#background-constant{
+    background: url(../images/background-home.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	z-index: 1!important;
+}
+
+.side-of-page{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+#left-side-page{
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(45,134,84,0.57)), color-stop(28%, rgba(45,134,84,0.79)), color-stop(51%, rgba(45,134,84,0.97)), color-stop(95%, rgba(45,134,84,1)));
+	background: linear-gradient(to bottom, rgba(45,134,84,0.57) 0%, rgba(45,134,84,0.79) 28%, rgba(45,134,84,0.97) 51%, rgba(45,134,84,1) 95%);
+    z-index: 3;
+}
+
+#right-side-page{
+    -webkit-filter: opacity(0.7);
+    filter: opacity(0.7);
+}
+
+#navbar-container{
+    height: 160px;
+    width: 160px;
+    background: white;
+    border-radius: 50%;
+    margin: calc(50vh - 80px) calc(50vw - 80px);
+    position: absolute;
+    -webkit-box-shadow: 0px 0px 7px rgb(50,50,50);
+    box-shadow: 0px 0px 7px rgb(50,50,50);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+    z-index: 8;
+	pointer-events: all;
+	-webkit-transition: 1s;
+	transition: 1s;
+}
+
+#navbar-container span{
+	margin: auto;
+	color: var(--theme-color);
+	font-family: var(--font);
+}
+
+#navbar-container:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+@-webkit-keyframes logo-rotation{
+	100%{
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes logo-rotation{
+	100%{
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+#navbar-icon{
+    margin: auto;
+    width: 60%;
+	-webkit-animation: logo-rotation;
+	animation: logo-rotation;
+	-webkit-animation-duration: 5s;
+	animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+#navbar-appears{
+	z-index: 7;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    height: 400px;
+    width: 400px;
+    margin: calc(50vh - 200px) calc(50vw - 200px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 50%;
+    position: absolute;
+	opacity: 0;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+}
+
+
+#right-side-nav{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+	background: transparent!important;
+}
+
+#left-side-nav{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border-bottom-right-radius: 100pc;
+    border-top-right-radius: 100pc;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(45,134,84,0.80)), color-stop(28%, rgba(45,134,84,0.79)), color-stop(51%, rgba(45,134,84,0.97)), color-stop(95%, rgba(45,134,84,0.97)));
+	background: linear-gradient(to bottom, rgba(45,134,84,0.80) 0%, rgba(45,134,84,0.79) 28%, rgba(45,134,84,0.97) 51%, rgba(45,134,84,0.97) 95%);
+}
+
+.point-nav{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 96%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.point-nav:first-child, .point-nav:last-child {
+    width: 65%;
+}
+
+.nav-category{
+	position: absolute;
+	height: 40px;
+	width: 150px;
+	margin-top: 30px;
+	margin-left: 57%;
+	font-family: var(--font);
+	font-size: 15px;
+	-webkit-filter: opacity(0);
+	filter: opacity(0);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	border-radius: 30px;
+	background-color: rgba(0,0,0,0.45);
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-delay: 0.8s;
+	transition-delay: 0.8s;
+}
+
+.nav-category a {
+	margin: auto;
+	text-decoration: none;
+	color: white;
+}
+
+.nav-category-especial {
+	margin-left: 40%;
+}
+
+@-webkit-keyframes appear-category{
+    100%{
+        -webkit-filter: opacity(1);
+        filter: opacity(1);
+    }
+}
+
+
+@keyframes appear-category{
+    100%{
+        -webkit-filter: opacity(1);
+        filter: opacity(1);
+    }
+}
+
+.container-description{
+	height: 30%;
+	width: 70%;
+	margin: 60% auto 0 auto;
+}
+
+.container-description h1{
+	color: white;
+	font-family: var(--font);
+	font-size: 35px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.container-description h2{
+	color: white;
+	font-family: var(--font);
+	font-weight: 400;
+	font-size: 25px;
+}
+
+.start-button{
+	height: 50px;
+	width: 50%;
+	margin-top: 10%;
+	border-radius: 5px;
+	background: white;
+	color: var(--theme-color);
+	font-family: var(--font);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.start-button a{
+	margin: auto;
+	text-decoration: none;
+	color: var(--theme-color);
+}
+
+@media screen and (max-device-width: 480px){
+	#navbar-container{
+		display: none;
+	}
+	
+	#right-side-page{
+		-webkit-box-flex: 0;
+		-ms-flex: 0;
+		flex: 0;
+	}
+	
+	.container-description{
+		margin-top: 70vh;
+		margin-left: 5vw;
+	}
+	
+	.container-description h1{
+		font-size: 50px;
+		font-family: 'Julius Sans One', sans-serif;
+	}
+	
+	.container-description h2{
+		font-size: 40px;
+		font-family: 'Julius Sans One', sans-serif;
+	}
+	
+	.start-button{
+		height: 100px;
+		width: 50vw;
+	}
+	
+	.start-button a{
+		font-size: 30px;
+		font-family: 'Julius Sans One', sans-serif;
+	}
+	
+	#background-constant{
+		background-size: cover;
+		background-position: 50%;
+	}
+}

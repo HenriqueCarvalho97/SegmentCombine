@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Segment Combine</title>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+        <script src='js/homepage.js'></script>
+        <link rel = "stylesheet" type = 'text/css' href="css/homepage.css">  
+        <link rel = "stylesheet" type = 'text/css' href="css/secondpage.css">  
+        <link rel = "stylesheet" type = 'text/css' href="css/thirdpage.css">  
+        <link rel = "stylesheet" type = 'text/css' href="css/forthpage.css">  
+        <link rel = "stylesheet" type = 'text/css' href="css/navbar.css">  
+        <link rel = "stylesheet" type = 'text/css' href="css/mobile.css">  
+		<link rel="stylesheet" href="css/animations.css">
+    </head>
+    <body>
+		<script type="text/javascript">
+			
+			$(function(){
+				$(document).ready(function(){
+					$(window).scroll(function(){
+						var aTop = $(window).height();
+						if($(this).scrollTop()>=aTop) {
+							$("#navbar-scroll").css('opacity','1');
+						}else if(($(this).scrollTop()<=aTop) && (navOn === 0)){
+							$("#navbar-scroll").css('opacity','0');
+						}
+					});
+				});
+			});
+			
+			$(document).ready(function(){
+				$('a[href^="#"]').on('click',function (e) {
+	    			e.preventDefault();
+
+	    			var target = this.hash;
+	    			var $target = $(target);
+						
+					$("#navbar-scroll").css('opacity','0');
+					$("#main").css('margin-left','0vw');	
+					$("#navbar-scroll").css('left','-80px');
+					$('#navbar-appears2').css('transform', 'rotate(0deg)');
+					navOn = 0; 
+					$('html, body').stop().animate({
+						'scrollTop': $target.offset().top
+					}, 900, 'swing', function () {
+						window.location.hash = target;
+					});
+				});
+			});
+
+		</script>
+		
+		<div id = 'mobile-stuff'>
+			<div id = 'navbar-mobile' onClick = 'mobileNav()'></div>
+			<div id = 'navbar-mobile-appears'>
+				<div id = 'close-mobile-nav' onclick='mobileNav()'></div>
+				<div id = 'mobile-subnav'>
+					<div class = 'mobile-subnav-space'><span class = 'mobile-nav-active'>Início</span></div>
+					<div class = 'mobile-subnav-space'><span>Sobre Nós</span></div>
+					<div class = 'mobile-subnav-space'><span>Apartamentos</span></div>
+					<div class = 'mobile-subnav-space'><span>Contactos</span></div>
+				</div>
+			</div>
+			<div id = 'first-mobile-page'>
+			</div>
+			<div id = 'second-mobile-page'>
+				<div class = 'second-mobile-container'>
+					<img src="images/empresa.jpg">
+				</div>
+				<div class = 'second-mobile-container'>
+					<h1>A Segment Combine</h1>
+					<div id = 'mobile-second-span'>
+						<span id = 'span-for-title-mobile'>Hotelaria e Alojamento</span><span> - Com o intuito de reabilitar e remodelar prédios, contamos com mais de 20 apartamentos em Lisboa, Porto e Viseu.</span>
+					</div>
+				</div>
+			</div>
+			<div id = 'third-mobile-page'>
+				<h1>Descubra as nossas<br>ofertas de imóveis</h1>
+				<h2>Para Venda</h2>
+				<div class = 'mobile-house'>
+					<div class = 'mobile-house-img'>
+						<img src = 'images/house1.jpg'>
+					</div>
+					<div class = 'mobile-house-description'>
+						<span style = 'font-weight: 700; text-transform:uppercase'>Lisboa</span>
+						<span>Apartamento na Avenida Almirante Reis, a cerca de 400 metros da estação de metro dos Anjos. Remodelado e eletrodomésticos instalados.</span>
+						<span>Uma área total de 220m<sup>2</sup> e 4 assoalhadas</span>
+						<span style = 'font-weight: 700'>400.000€</span>
+					</div>
+				</div>
+				<div class = 'mobile-house' style = 'border-bottom: none'>
+					<div class = 'mobile-house-img'>
+						<img src = 'images/house2.jpg'>
+					</div>
+					<div class = 'mobile-house-description'>
+						<span style = 'font-weight: 700; text-transform:uppercase'>Lisboa</span>
+						<span>Apartamento na Avenida Alvares Cabral, a cerca de 700 metros da estação de metro do Rato. Remodelado e eletrodomésticos instalados.</span>
+						<span>Uma área total de 250m<sup>2</sup> e 3 assoalhadas</span>
+						<span style = 'font-weight: 700'>600.000€</span>
+					</div>
+				</div>
+				<div id = 'mobile-rent'>
+					<h2>E para Aluguer</h2>
+					<div class = 'mobile-house'>
+						<div class = 'mobile-house-img'>
+							<img src = 'images/house3.jpg'>
+						</div>
+						<div class = 'mobile-house-description'>
+							<span style = 'font-weight: 700; text-transform:uppercase'>Lisboa</span>
+							<span>Apartamento para alugar na Rua Augusta, Chiado. No centro da baixa de Lisboa perto do metro. Tem wi-fi e televisão por cabo.</span>
+							<span>Possui 1 cama de casal e cozinha operacional</span>
+							<span style = 'font-weight: 700'>140€/noite</span>
+						</div>
+					</div>
+					<div class = 'mobile-house' style = 'border-bottom: none; margin-bottom: 0'>
+						<div class = 'mobile-house-img'>
+							<img src = 'images/house4.jpg'>
+						</div>
+						<div class = 'mobile-house-description'>
+							<span style = 'font-weight: 700; text-transform:uppercase'>Lisboa</span>
+							<span>Apartamento para alugar na Rua Augusta, Chiado. No centro da baixa de Lisboa perto do metro. Tem wi-fi e televisão por cabo.</span>
+							<span>Possui 1 cama de casal e cozinha operacional</span>
+							<span style = 'font-weight: 700'>140€/noite</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id = 'forth-page-mobile'>
+				<h1>Contactos</h1>
+				<img src = 'images/team.png'>
+				<h2>Entre em contacto com a nossa equipa. Estamos disposto a ajudá-lo naquilo que necessitar.</h2>
+				<h3>Telemóvel :</h3>
+				<h4>915157460</h4>
+				<h3>E-mail :</h3>
+				<h4>hnrique.carvalho@gmail.com</h4>
+				<div id = 'map'></div>
+				<script>
+      				function initMap() {
+						var uluru = {lat: 38.723118, lng: -9.151664};
+						var map = new google.maps.Map(document.getElementById('map'), {
+							zoom: 17,
+							center: uluru
+						});
+        				var marker = new google.maps.Marker({
+          				position: uluru,
+							map: map
+        				});
+      				}
+				</script>
+				<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj0V9_h_PFPdPdg09acVJh4FUMx-8pLC8&callback=initMap">
+				</script>
+			</div>
+		</div>
+		
+		<div id = 'navbar-appears2'>
+			<div class = 'side-nav2' id = 'left-nav2'></div>
+			<div class = 'side-nav2' id = 'right-nav2'>
+				<div class = 'point-nav2'>
+					<div class = 'point-itself2'></div>
+					<div class = 'nav-category2 nav-category-especial2'><a href = '#forth-page-container'>Contactos</a></div>
+				</div>
+				<div class = 'point-nav2'>
+					<div class = 'point-itself2'></div>
+					<div class = 'nav-category2'><a href = '#third-page-container'>Apartamentos</a></div>
+				</div>
+				<div class = 'point-nav2'>
+					<div class = 'point-itself2'></div>
+					<div class = 'nav-category2'><a href = '#second-page-container'>Sobre Nós</a></div>
+				</div>
+				<div class = 'point-nav2'>
+					<div class = 'point-itself2'></div>
+					<div class = 'nav-category2 nav-category-especial2'><a href = '#first-page-container'>Início</a></div>
+				</div>
+			</div>
+		</div>
+		
+		<div id = 'navbar-scroll' onclick = 'rollNavbar()'>
+			<div id = 'menu-icon-navbar'></div>
+		</div>
+		
+		<div id = 'main'>
+			<div id = 'background-constant'></div>
+
+			<div class = 'page' id = 'first-page-container'>
+				<div class = 'side-of-page' id = 'left-side-page'>
+					<div class = 'container-description'>
+						<h1>Segment Combine</h1>
+						<h2>Lorem ipsum dolor amet</h2>
+						<div class = 'start-button'>
+							<a href = '#second-page-container'>Começar</a>
+						</div>
+					</div>
+				</div>
+				<div class = 'side-of-page' id = 'right-side-page'></div>
+				<div id = 'navbar-container' onclick = 'navbarAppears()'>
+					<img src = 'images/shapes.png' id = 'navbar-icon'>
+					<span>MENU</span>
+				</div>
+				<div id = 'navbar-appears'>
+					<div id= 'right-side-nav'>
+					</div> 
+					<div id= 'left-side-nav'>
+						<div class = 'point-nav'>
+							<div class = 'point-itself'></div>
+							<div class = 'nav-category nav-category-especial'><a href = '#first-page-container'>Início</a></div>
+						</div>
+						<div class = 'point-nav'>
+							<div class = 'point-itself'></div>
+							<div class = 'nav-category'><a href = '#second-page-container'>Sobre Nós</a></div>
+						</div>
+						<div class = 'point-nav'>
+							<div class = 'point-itself'></div>
+							<div class = 'nav-category'><a href = '#third-page-container'>Apartamentos</a></div>
+						</div>
+						<div class = 'point-nav'>
+							<div class = 'point-itself'></div>
+							<div class = 'nav-category nav-category-especial'><a href = '#forth-page-container'>Contactos</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class = 'page animatedParent' data-sequence="600" data-appear-top-offset='-150' id = 'second-page-container'>
+				<div id = 'title-second-page' class = 'animated fadeInUpShort' data-id="1">
+					<h1>Imobiliário e Alojamento</h1>
+				</div>
+				<div id = 'description-second-page' class = 'animated fadeInUpShort' data-id="2">
+					<h4>&nbsp&nbsp&nbsp&nbsp A Segment Combine foi fundada a Setembro de 2017 e orgulha-se de estar presente no sector imobiliário e de alojamento desde o momento da sua criação. Na ideia de reabilitar e remodelar prédios e apartamentos, a Segment Combine possui agora mais de 20 imóveis nas cidades do Porto e de Lisboa. </h4>
+				</div>
+				<div id = 'container-more-info' class = 'animated fadeInUpShort' data-id="3">
+					<a id = 'subcontainer-more-info' href = '#forth-page-container'>
+						<span>Contacte-nos</span>
+					</a>
+				</div>
+			</div>
+			<div class = 'super-page' id = 'third-page-container'>
+				<div id = 'third-page-title' class = 'animatedParent' data-appear-top-offset='-150'>
+					<span class = 'animated fadeInUpShort' data-id = '1'>Descruba as nossas<br>ofertas de imobiliário</span>
+				</div>
+				<div class = 'house-container animatedParent' data-appear-top-offset='-150'>
+					<div class = 'house-image animated fadeInUpShort'>
+						<div class = 'container-house-image'>
+							<img src = 'images/house1.jpg' onclick = 'navbarAppears()'>
+						</div>
+						<div class = 'magnifying-glass'>
+							<img src = 'images/magnifying-glass.png'>
+						</div>
+					</div>
+					<div class = 'house-side animated fadeInUpShort'>
+						<div class = 'container-house-description'>
+							<span style = 'font-weight: 700; text-transform:uppercase'>Lisboa</span>
+							<span>Apartamento na Avenida Almirante Reis, a cerca de 400 metros da estação de metro dos Anjos. Remodelado e eletrodomésticos instalados.</span>
+							<span>Uma área total de 220m<sup>2</sup> e 4 assoalhadas</span>
+							<span style = 'font-weight: 700'>400.000€</span>
+						</div>
+					</div>
+				</div>
+				<div class = 'house-container animatedParent' data-appear-top-offset='-150'>
+					<div class = 'house-side animated fadeInUpShort'>
+						<div class = 'container-house-description container-house-description-right'>
+							<span style = 'font-weight: 700; text-transform:uppercase'>Lisboa</span>
+							<span>Apartamento na Avenida Alvares Cabral, a cerca de 700 metros da estação de metro do Rato. Remodelado e eletrodomésticos instalados.</span>
+							<span>Uma área total de 250m<sup>2</sup> e 3 assoalhadas</span>
+							<span style = 'font-weight: 700'>600.000€</span>
+						</div>
+					</div>
+					<div class = 'house-image animated fadeInUpShort'>
+						<div class = 'container-house-image'>
+							<img src = 'images/house2.jpg'>
+						</div>
+						<div class = 'magnifying-glass'>
+							<img src = 'images/magnifying-glass.png'>
+						</div>
+					</div>
+				</div>
+				<div class = 'see-more-houses' id = 'see-more-houses1'>
+					<span onClick = 'seeMoreHouses1()'>Ver Mais</span>
+				</div>
+				<div class = 'hidden'>
+					<div class = 'house-container'>
+						<div class = 'house-image'>
+							<div class = 'container-house-image'>
+								<img src = 'images/house1.jpg' onclick = 'navbarAppears()'>
+							</div>
+						</div>
+						<div class = 'house-side'>
+							<div class = 'container-house-description'>
+								<span style = 'font-weight: 700; text-transform:uppercase'>Lisboa</span>
+								<span>Apartamento na Avenida Almirante Reis, a cerca de 400 metros da estação de metro dos Anjos. Remodelado e eletrodomésticos instalados.</span>
+								<span>Uma área total de 220m<sup>2</sup> e 4 assoalhadas</span>
+								<span style = 'font-weight: 700'>400.000€</span>
+							</div>
+						</div>
+					</div>
+					<div class = 'house-container'>
+						<div class = 'house-side'>
+							<div class = 'container-house-description container-house-description-right'>
+								<span style = 'font-weight: 700; text-transform:uppercase'>Lisboa</span>
+								<span>Apartamento na Avenida Alvares Cabral, a cerca de 700 metros da estação de metro do Rato. Remodelado e eletrodomésticos instalados.</span>
+								<span>Uma área total de 250m<sup>2</sup> e 3 assoalhadas</span>
+								<span style = 'font-weight: 700'>600.000€</span>
+							</div>
+						</div>
+						<div class = 'house-image'>
+							<div class = 'container-house-image'>
+								<img src = 'images/house2.jpg'>
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div id = 'third-page-title2' class = 'animatedParent' data-appear-top-offset='-150'>
+					<span class = 'animated fadeInUpShort'>E para aluguer</span>
+				</div>
+
+				<div class = 'house-container animatedParent' data-appear-top-offset='-150'>
+					<div class = 'house-image animated fadeInUpShort'>
+						<div class = 'container-house-image'>
+							<img src = 'images/house3.jpg'>
+						</div>
+						<div class = 'magnifying-glass'>
+							<img src = 'images/magnifying-glass.png'>
+						</div>
+					</div>
+					<div class = 'house-side animated fadeInUpShort'>
+						<div class = 'container-house-description'>
+							<span style = 'font-weight: 700; text-transform:uppercase'>Lisboa</span>
+							<span>Apartamento para alugar na Rua Augusta, Chiado. No centro da baixa de Lisboa perto do metro. Tem wi-fi e televisão por cabo.</span>
+							<span>Possui 1 cama de casal e cozinha operacional</span>
+							<span style = 'font-weight: 700'>140€/noite</span>
+						</div>
+					</div>
+				</div>
+				<div class = 'house-container house-container-last animatedParent' data-appear-top-offset='-150'>
+					<div class = 'house-side animated fadeInUpShort'>
+						<div class = 'container-house-description container-house-description-right'>
+							<span style = 'font-weight: 700; text-transform:uppercase'>Porto</span>
+							<span>Apartamento para alugar na Avenida dos Aliados, no centro do Porto. Tem wi-fi e ar condicionado.</span>
+							<span>Um total de 3 camas (1 cama casal, 1 cama individual) e cozinha operacional</span>
+							<span style = 'font-weight: 700'>90€/noite</span>
+						</div>
+					</div>
+					<div class = 'house-image animated fadeInUpShort'>
+						<div class = 'container-house-image'>
+							<img src = 'images/house4.jpg'>
+						</div>
+						<div class = 'magnifying-glass'>
+							<img src = 'images/magnifying-glass.png'>
+						</div>
+					</div>
+				</div>
+				<div class = 'see-more-houses'>
+					<span>Ver Mais</span>
+				</div>
+			</div>
+			<div class = 'page' id = 'forth-page-container'>
+				<div id = 'forth-page-title' class = 'animatedParent' data-appear-top-offset='-150'>
+					<span class = 'animated fadeInUpShort'>Contacte-nos</span>
+				</div>
+				<div id = 'contacts-container'>
+					<div id = 'contacts-subcontainer1' class = 'animatedParent' data-appear-top-offset='-150'>
+						<span class = 'animated fadeInUpShort'>Estamos dispostos a ajudá-lo naquilo que for preciso! Contacte-nos via telemóvel, e-mail ou venha ter connosco!</span>
+					</div>
+					<div id = 'contacts-subcontainer2' class = 'animatedParent' data-appear-top-offset='-150'>
+						<div class = 'circle-contact animated fadeInUpShort'>
+							<div class = 'contact-category'>
+								<img src = 'images/001-smartphone.png'>
+							</div>
+							<div class = 'contact-category'>
+								<img src = 'images/002-email.png'>
+							</div>
+							<a class = 'contact-category' href= 'https://www.google.pt/maps/place/R.+Braamcamp,+1250-096+Lisboa/@38.7228703,-9.1537889,17z/data=!3m1!4b1!4m5!3m4!1s0xd193370abb05f11:0x700555a57b5276fa!8m2!3d38.7228703!4d-9.1515949'>
+								<img id = 'contact-local' src = 'images/localiza%C3%A7ao.JPG'>
+							</a>
+						</div>
+						<div class = 'description-contact animated fadeInUpShort'>
+							<div class = 'category-description'>
+								<div class = 'round-description'>
+									<div class = 'contact-tag'>
+										<span>Telemóvel </span>
+										<h9>&#8594</h9>
+									</div>
+									<div class = 'contact-value'>
+										<span>929 017 295</span>
+									</div>
+								</div>
+							</div>
+							<div class = 'category-description animated fadeInUpShort'>
+								<div class = 'round-description'>
+									<div class = 'contact-tag'>
+										<span>E-mail</span>
+										<h9>&#8594</h9>
+									</div>
+									<div class = 'contact-value'>
+										<span>armindo.carvalho@segmentcombine.pt</span>
+									</div>
+								</div>
+							</div>
+							<div class = 'category-description'>
+								<div class = 'round-description'>
+									<div class = 'contact-tag'>
+										<span>Localização</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script type="text/javascript" src="js/css3-animate-it.js"></script>
+    </body>
+</html>

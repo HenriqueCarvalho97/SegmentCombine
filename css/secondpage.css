@@ -1,0 +1,84 @@
+#second-page-container{
+	background: -webkit-gradient(linear, left bottom, left top, from(rgba(45,134,84,0.57)), color-stop(28%, rgba(45,134,84,0.79)), color-stop(51%, rgba(45,134,84,0.97)), color-stop(95%, rgba(45,134,84,1)));
+	background: linear-gradient(to top, rgba(45,134,84,0.57) 0%, rgba(45,134,84,0.79) 28%, rgba(45,134,84,0.97) 51%, rgba(45,134,84,1) 95%);
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	position: relative;
+}
+
+#title-second-page{
+	width: 100%;
+	height: 30%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+#title-second-page h1{
+	font-family: 'Quicksand', sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+	color: white;
+	margin: auto;
+	font-size: 40px;
+}
+
+#description-second-page{
+	width: 60%;
+	margin-left: 20%;
+	height: 30%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+#description-second-page h4{
+	margin: auto;
+	text-align: justify;
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+#container-more-info{
+	width: 70%;
+	margin-left: 15%;
+	height: 40%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+#subcontainer-more-info{
+	height: 30%;
+	width: 30%;
+	margin: auto;
+	border: 3px solid white;
+	color: white;
+	text-decoration: none;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+#subcontainer-more-info span{
+	margin: auto;
+	color: white;
+	text-decoration: none;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 750px){
+	#description-second-page{
+		width: 80%;
+		margin-left: 10%;
+	}
+	
+	#subcontainer-more-info span{
+		font-size: 15px;
+	}
+}

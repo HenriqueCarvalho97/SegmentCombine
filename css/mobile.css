@@ -1,0 +1,328 @@
+#mobile-stuff{
+	position: absolute;
+	width: 100vw;
+	height: inherit;
+	z-index: 5;
+	display: none; /* mobile */
+	overflow: hidden;
+}
+
+#first-mobile-page{
+	height: 100vh;
+	width: 100vw;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+#navbar-mobile{
+	z-index: 5;
+	position: fixed;
+	height: 150px;
+	width: 150px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	background: url(../images/menu-mobile.png);
+	background-size: 70%;
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-filter: invert(0.95);
+	filter: invert(0.95);
+}
+
+#navbar-mobile-appears{
+	z-index: 5;
+	position: relative;
+	width: 0vw;
+	height: 100vh;
+	background-color: #444;
+	position: fixed;
+	-webkit-transition: 300ms;
+	transition: 300ms;
+	overflow: hidden;
+}
+
+#close-mobile-nav{
+	height: 10vh;
+	width: 10vh;
+	margin-left: calc(100vw - 10vh);
+	background: url(../images/error.png);
+	-webkit-filter: invert(0.95);
+	filter: invert(0.95);
+	background-size: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0;
+	-webkit-transition: 300ms;
+	transition: 300ms;
+	-webkit-transition-delay: 400ms;
+	transition-delay: 400ms;
+}
+
+#mobile-subnav{
+	height: 70vh;
+	width: 100%;
+	margin-top: 5vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	opacity: 0;
+	-webkit-transition: 300ms;
+	transition: 300ms;
+	-webkit-transition-delay: 400ms;
+	transition-delay: 400ms;
+}
+
+.mobile-subnav-space{
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 7%;
+}
+
+.mobile-subnav-space span{
+	margin: auto;
+	font-family: var(--font);
+	color: rgba(255,255,255,0.7);
+	font-size: 40px;
+	font-weight: 300;
+}
+
+.mobile-nav-active{
+	color: rgba(255,255,255,0.9)!important;
+	font-size: 50px!important;
+}
+
+@media screen and (max-device-width: 480px){
+	#mobile-stuff{
+		display: block;
+	}
+	
+	#navbar-scroll{
+		display: none;
+	}
+	
+	#second-page-container{
+		opacity: 0;
+	}
+	
+	#third-page-container{
+		opacity: 0;
+		display: none;
+	}
+}
+
+#second-mobile-page{
+	height: 100vh;
+	width: 100vw;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.second-mobile-container{
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	background-color: #555;
+}
+
+.second-mobile-container h1{
+	font-family:'Julius Sans One', sans-serif;
+	font-size: 40px;
+	text-transform: uppercase;
+	color: #ddd;
+	letter-spacing: 3px;
+	margin: 10%;
+}
+
+#mobile-second-span{
+	height: 50%;
+	width: 80%;
+	margin: 10% 10%;
+}
+
+.second-mobile-container span{
+	font-family:  'Julius Sans One', sans-serif;
+	line-height: 150%;
+	font-size: 30px;
+	max-width: 10vw;
+	text-align: justify;
+	color: white;
+	font-weight: 300;
+}
+
+#span-for-title-mobile{
+	color: rgb(67, 198, 132);
+	text-transform: uppercase;
+	font-size: 35px;
+}
+
+.second-mobile-container img{
+	max-height: 50vh;
+}
+
+#third-mobile-page{
+	margin-top: -1vh;
+	width: 100vw;
+	height: inherit;
+	background-color: #222;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+#third-mobile-page h1{
+	margin-top: 1vh;
+	margin-bottom: 0;
+	font-family: 'Julius Sans One', sans-serif;
+	line-height: 150%;
+	text-align: center;
+	padding: 2vh 0vh;
+	width: 60vw;
+	margin-left: 20vw;
+	color: #ddd;
+	z-index: 4;
+}
+
+#third-mobile-page h2{
+	color: #ddd;
+	text-align: center;
+	line-height: 150%;
+	font-size: 28px;
+	font-family: 'Julius Sans One', sans-serif;
+}
+
+.mobile-house{
+	width: 100vw;
+	height: 60vh;
+	margin-bottom: 2vh;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	border-bottom: 1px solid #666;
+}
+
+.mobile-house-img{
+	height: 30vh;
+	width: 30vh;
+	border-radius: 50%;
+	margin-left: calc(50vw - 15vh);
+	overflow: hidden;
+}
+
+.mobile-house img{
+	max-height: 30vh;
+}
+
+.mobile-house-description{
+	height: 30vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.mobile-house span{
+	width: 90%;
+	margin: auto;
+	font-family: 'Julius Sans One', sans-serif;
+	color: #ddd;
+	font-size: 25px;
+	text-align: center;
+}
+
+#mobile-rent{
+	background: #111;
+}
+
+#mobile-rent h2{
+	padding-top: 2vh;
+}
+
+#forth-page-mobile{
+	height: 100vh;
+	width: 100vw;
+	background: var(--theme-color);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+#forth-page-mobile h1{
+	margin: 0;
+	font-family: 'Julius Sans One', sans-serif;
+	color: #ddd;
+	font-size: 35px;
+	text-align: center;
+	padding-top: 5vh;
+}
+
+#forth-page-mobile img{
+	height: 15vh;
+	width: 15vh;
+	margin: 5vh calc(50vw - 7.5vh);
+}
+
+#forth-page-mobile h2{
+	text-align: center;
+	font-family: 'Julius Sans One', sans-serif;
+	color: #ddd;
+	font-size: 25px;
+	width: 80%;
+	margin-left: 10%;
+	letter-spacing: 2px;
+}
+
+#forth-page-mobile h3{
+	text-align: left;
+	font-family: 'Julius Sans One', sans-serif;
+	color: #ddd;
+	font-size: 20px;
+	width: 30%;
+	margin-left: 15%;
+}
+
+#forth-page-mobile h4{
+	text-align: left;
+	font-family: 'Julius Sans One', sans-serif;
+	color: #ddd;
+	font-size: 20px;
+	width: calc(70% - 30px);
+	margin-left: 15%;
+	background: rgb(35, 125, 80);
+	padding: 10px;
+	padding-right: 0px;
+	padding-left: 30px;
+	border-radius: 50px;
+	letter-spacing: 3px;
+}
+
+#map{
+	height: 30vh;
+	width: 70%;
+	margin: 0 auto;
+	border-radius: 5px;
+	z-index: 1;
+}
