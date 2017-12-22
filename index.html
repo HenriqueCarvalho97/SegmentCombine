@@ -1,149 +1,165 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
-        <title>Segment Combine</title>
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-		<link rel = 'stylesheet' type="text/css" href = 'css/casa.css'>
-        <link rel = "stylesheet" type = 'text/css' href="css/homepage.css">  
-	</head>
-	<body>
-		<script>
-			$(document).on('click', 'a[href^="#"]', function (event) {
-    			event.preventDefault();
 
-    			$('html, body').animate({	
-					scrollTop: $($.attr(this, 'href')).offset().top
-				}, 500);
-			});
-		</script>
-		<div id = 'top'></div>
-		<a href = '#top' id = 'go-to-top'></a>
-		<div id = 'house-image'>
-			<img id = 'casa-image' src = 'images/house1.jpg'>
-			<div id = 'gallery-button'>
-				<div id = 'icon-gallery'>
-					<img src = 'images/camera-shutter.png'>
+<head>
+	<title>Segment Combine</title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<link rel='stylesheet' type="text/css" href='css/casa.css'>
+	<link rel="stylesheet" type='text/css' href="css/homepage.css">
+	<link rel="stylesheet" type='text/css' href="css/mobile-house.css">
+	<link rel="stylesheet" type="text/css" href="css/media-queries.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+
+<body>
+	<!--FIXME: Add version for iPads -->
+	<!--TODO: Add navbar. -->
+	<script>
+		$(document).on('click', 'a[href^="#"]', function(event) {
+			event.preventDefault();
+
+			$('html, body').animate({
+				scrollTop: $($.attr(this, 'href')).offset().top
+			}, 500);
+		});
+	</script>
+	<a class='go-home-btn' href='home.html'>&#x2190 Regressar</a>
+	<div id="mobile-house">
+	</div>
+	<div id='house-main-div'>
+		<div id='top'></div>
+		<a href='#top' id='go-to-top'></a>
+		<div id='house-image'>
+			<img id='casa-image' src='images/house1.jpg'>
+			<div id='gallery-button'>
+				<div id='icon-gallery'>
+					<img src='images/camera-shutter.png'>
 				</div>
 				<span>Ver Galeria</span>
 			</div>
 		</div>
-		<div id = 'house-container'>
-			<h1>Alameda Dom Afonso Henriques</h1>
-			<div id = 'house-description'>
-				<h5>Casa localizada no topo do jardim por trás da Fonte Luminosa. Um luxuoso T3 com 2 lugares de garagem. Localiza-se a 500m da estação de metro da linha verde e vermelha. Possui terraço no prédio com uma vista imperdível sobre a cidade de Lisboa.</h5>
+		<div id='house-container'>
+			<h1 class='my-h1'>Alameda Dom Afonso Henriques</h1>
+			<div id='house-description'>
+				<h5 class='my-h5'>Casa localizada no topo do jardim por trás da Fonte Luminosa. Um luxuoso T3 com 2 lugares de garagem. Localiza-se a 500m da estação de metro da linha verde e vermelha. Possui terraço no prédio com uma vista imperdível sobre a cidade de Lisboa.<br><br>Esta casa foi remodelada e possui chão em madeira, bancadas em mármore e eletrodomésticos Siemens topo de gama. Nenhum elemento foi deixado ao acaso e pode explorar tudo sobre esta maravilhosa casa na fotogaleria.<br><br>Qualquer dúvida não hesite em contactar-nos ou submeter um formulário de interesse <a style="color:var(--theme-color);" href='#contact-page'>aqui</a>.</h5>
 			</div>
-			<div id = 'middle-photo-container'>
-				<img src = 'images/fonte.jpg' id = 'middle-photo'>
-			</div>	
-			<div id = 'house-characteristics'>
-				<h3>Características</h3>
-				<div class = 'characteristic-column'>
-					<div class = 'characteristic-row'>
-						<div class = 'icon-item'>
-							<img src = 'images/007-price-tag.png'>
-							<div class = 'item-value'>
-								<span>400.000€</span>
+			<div id='middle-photo-container'>
+				<img src='images/fonte.jpg' id='middle-photo'>
+			</div>
+			<div id='house-characteristics'>
+				<h3 class='my-h3'>Características</h3>
+				<div id="characteristic">
+					<div class="characteristic-line">
+						<div class='characteristic-subline'>
+							<div class="characteristic-column" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Área Bruta">
+								<div class="icon-img">
+									<img class='img-gallery' src='images/003-square-layouting-with-black-square-in-east-area.png'>
+								</div>
+								<div class="icon-value">200m<sup>2</sup></div>
+							</div>
+							<div class="characteristic-column" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tipologia">
+								<div class="icon-img">
+									<img src="images/005-bed.png" class="img-gallery">
+								</div>
+								<div class="icon-value">4 assoalhadas</div>
 							</div>
 						</div>
-						<div class = 'name-item'><span>Preço</span></div>
-					</div>
-					<div class = 'characteristic-row'>
-						<div class = 'icon-item'>
-							<img src = 'images/003-square-layouting-with-black-square-in-east-area.png'>
-							<div class = 'item-value'>
-								<span>220m<sup>2</sup></span>
+						<div class='characteristic-subline'>
+							<div class="characteristic-column" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Casas de banho">
+								<div class="icon-img">
+									<img src="images/004-bathtub.png" class="img-gallery">
+								</div>
+								<div class="icon-value">3 casas-de-banho</div>
+							</div>
+							<div class="characteristic-column" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Plantas da casa">
+								<div class="icon-img">
+									<img src="images/002-architect-with-helmet.png" class="img-gallery">
+								</div>
+								<div class="icon-value">Visualizar plantas</div>
 							</div>
 						</div>
-						<div class = 'name-item'><span>Área</span></div>
 					</div>
-					<div class = 'characteristic-row'>
-						<div class = 'icon-item'>
-							<img src = 'images/006-placeholder.png'>
-						</div>
-						<div class = 'name-item'><span>Localização</span></div>
-					</div>
-					<div class = 'characteristic-row' style = 'border-right: none;'>
-						<div class = 'icon-item'>
-							<img src = 'images/005-bed.png'>
-							<div class = 'item-value'>
-								<span>3</span>
+					<div class="characteristic-line">
+						<div class='characteristic-subline'>
+							<div class="characteristic-column" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Lugares de garagem">
+								<div class="icon-img">
+									<img src="images/008-car.png" alt="" class="img-gallery">
+								</div>
+								<div class="icon-value">2 lugares</div>
+							</div>
+							<div class="characteristic-column" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Espaço exterior">
+								<div class="icon-img">
+									<img src="images/001-grill.png" alt="" class="img-gallery">
+								</div>
+								<div class="icon-value">20m<sup>2</sup> de varanda</div>
 							</div>
 						</div>
-						<div class = 'name-item'><span>Quartos</span></div>
-					</div>
-				</div>
-				<div class = 'characteristic-column' style = 'border-top: 1px solid #666'>
-					<div class = 'characteristic-row'>
-						<div class = 'icon-item'>
-							<img src = 'images/004-bathtub.png'>
-							<div class = 'item-value'>
-								<span>2</span>
+						<div class='characteristic-subline'>
+							<div class="characteristic-column" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Localização">
+								<div class="icon-img">
+									<img src="images/006-placeholder.png" alt="" class="img-gallery">
+								</div>
+								<div class="icon-value">Visualizar Localização</div>
+							</div>
+							<div class="characteristic-column" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Preço">
+								<div class="icon-img">
+									<img src="images/007-price-tag.png" alt="" class="img-gallery">
+								</div>
+								<div class="icon-value">600.000€</div>
 							</div>
 						</div>
-						<div class = 'name-item'><span>Casas de banho</span></div>
-					</div>
-					<div class = 'characteristic-row'>
-						<div class = 'icon-item'>
-							<img src = 'images/008-car.png'>
-							<div class = 'item-value'>
-								<span>&#10003</span>
-							</div>
-						</div>
-						<div class = 'name-item'><span>Garagem</span></div>
-					</div>
-					<div class = 'characteristic-row'>
-						<div class = 'icon-item'>
-							<img src = 'images/002-architect-with-helmet.png'>
-						</div>
-						<div class = 'name-item'><span>Plantas da casa</span></div>
-					</div>
-					<div class = 'characteristic-row' style = 'border-right: none;'>
-						<div class = 'icon-item'>
-							<img src = 'images/001-grill.png'>
-							<div class = 'item-value'>
-								<span>&#10003</span>
-							</div>
-						</div>
-						<div class = 'name-item'><span>Zona Exterior</span></div>
 					</div>
 				</div>
 			</div>
-			<div id = 'contact-page'>
-				<h3 style = 'color: #ddd;'>Informe-nos do seu interesse</h3>
-				<form>
-					<input type = 'text' name = 'nome' placeholder="Nome">
-					<input type = 'text' name = 'e-mail' placeholder="E-mail">
-					<input type = 'text' name = 'telefone' placeholder="Telefone">
-					<input type = 'submit' name = 'submeter' value = 'Informar'>
+			<div id='my-contact-page'>
+				<h3 class='my-h3' style='color: #ddd;'>Informe-nos do seu interesse</h3>
+				<form class='my-form'>
+					<input class='my-input' type='text' name='nome' placeholder="Nome">
+					<input class='my-input' type='text' name='e-mail' placeholder="E-mail">
+					<input class='my-input' type='text' name='telefone' placeholder="Telefone">
+					<input class='my-input' type='submit' name='submeter' value='Informar'>
 				</form>
 			</div>
 		</div>
-		<script>
+	</div>
+	<script>
 		$(window).scroll(function() {
 			var a = $('#house-image').height();
 			var b = $('#house-container').height();
-			var c = $('#contact-page').height()*1.1;
-    		if($(window).scrollTop() >= (a + b - c)) {
-				$('#house-container').css('background','#333');
-				$('#contact-page').css('opacity','1');
-			}else{
-				$('#house-container').css('background','#ddd');
-				$('#contact-page').css('opacity','0');
+			var c = $('#my-contact-page').height() * 1.1;
+			if ($(window).width() < 900) {
+				var c = $('#my-contact-page').height() * 1.3;
+			}
+			if ($(window).scrollTop() >= (a + b - c)) {
+				$('#house-container').css('background', '#333');
+				$('#my-contact-page').css('opacity', '1');
+			} else {
+				$('#house-container').css('background', '#ddd');
+				$('#my-contact-page').css('opacity', '0');
 			}
 		});
-		</script>
-		<script>
+	</script>
+	<script>
+		$(function() {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+
 		$(window).scroll(function() {
-			var a = $('#house-image').height()/2;
-    		if($(window).scrollTop() >= (a)) {
-				$('#go-to-top').css('opacity','1');
-			}else{
-				$('#go-to-top').css('opacity','0');
+			var a = $('#house-image').height() / 2;
+			if ($(window).scrollTop() >= (a)) {
+				$('#go-to-top').css('opacity', '1');
+			} else {
+				$('#go-to-top').css('opacity', '0');
 			}
 		});
-		</script>
-	</body>
+	</script>
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+
 </html>
