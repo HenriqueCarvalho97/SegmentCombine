@@ -4,6 +4,12 @@ body {
 	overflow-x: hidden;
 }
 
+:root {
+	--theme-color: rgb(45, 134, 89);
+	--font: 'Quicksand', sans-serif;
+}
+
+
 #house-image {
 	width: 100vw;
 	height: 70vh;

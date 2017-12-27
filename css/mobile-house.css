@@ -1,3 +1,79 @@
 #mobile-house {
-	margin-top: 30vh;
+	height: inherit;
+	width: 100vw;
+	position: fixed;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	background: #ddd;
+}
+
+.home-img-mobile {
+	height: 80vh;
+	width: 90vw;
+	margin: 10vh auto;
+	overflow: hidden;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+#img-mob {
+	height: 80vh;
+	width: 90vw;
+	z-index: -1;
+	position: absolute;
+	-webkit-filter: brightness(0.6);
+	filter: brightness(0.6);
+
+}
+
+.home-img-mobile span {
+	margin: auto;
+	font-family: 'Julius Sans One', sans-serif;
+	font-weight: 700;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+}
+
+.go-down-btn {
+	height: 10vh;
+	width: 10vh;
+	margin-top: -15vh;
+	margin-left: calc(50vw - 5vh);
+	border: 1px solid #eee;
+	background: var(--theme-color);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-shadow: 0px 0px 5px #222;
+	box-shadow: 0px 0px 5px #222;
+}
+
+.go-down-btn img {
+	-webkit-filter: invert(1);
+	filter: invert(1);
+	height: 60%;
+	margin: auto;
+}
+
+.go-home-btn-mobile {
+	color: black;
+	font-family: 'Julius Sans One', sans-serif;
+	position: absolute;
+	top: 1%;
+	left: 5vw;
+	border-bottom: 1px solid black;
+}
+
+.go-home-btn-mobile:hover {
+	color: black;
+	text-decoration: none;
+}
+
+#first-mob-page {
+	height: 100vh;
+	margin-top: 10vh;
+	background: blue;
 }
