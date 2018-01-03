@@ -154,12 +154,4 @@
 	.footer-mob span {
 		font-size: 20px;
 	}
-
-	.carousel-item {
-		height: 40vh;
-		width: 100vw!important;
-		margin: 25vh auto;
-	}
-
-
 }

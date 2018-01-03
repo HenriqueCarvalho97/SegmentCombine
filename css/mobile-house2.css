@@ -300,7 +300,7 @@
 	font-family: 'Julius Sans One', sans-serif;
 }
 
-.mobile-modal {
+.my-modal {
 	height: 100vh;
 	width: 100vw;
 	position: fixed;
@@ -314,51 +314,163 @@
 	top: 0;
 }
 
-.close-modal-mob {
+.my-modal-sub {
+	height: 10vh;
+	width: 10vh;
+	background: url(../images/error.png);
+	-webkit-filter: invert(1);
+	filter: invert(1);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50%;
 	position: relative;
-	width: 50px;
-	height: 50px;
-	left: calc(100vw - 70px);
-	top: 20px;
+	left: calc(100vw - 12vh);
+}
+
+.my-carousel-container {
+	position: relative;
+	width: 80%;
+	padding-top: 36%;
+	left: 8%;
+	margin: auto 0;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	background: url(../images/error.png);
-	background-size: 80%;
-	background-position: center;
-	background-repeat: no-repeat;
-	-webkit-filter: invert(1);
-	filter: invert(1);
+	background: #eee;
 }
 
-.modal-itself-mob {
-	height: 30vh;
-	width: 80vw;
-	margin: 30vh auto 5vh;
+#image-roller {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #d3e5f1;
+}
+
+.image-item {
+	display: none;
+	height: 100%;
+	width: 100%;
 	overflow: hidden;
 }
 
-.modal-itself-mob img {
-	height: 110%;
+.active {
+	display: block;
 }
 
-.dots-modal-mob {
-	height: 10vh;
-	width: 80vw;
-	margin: 0 auto;
+.image-item img {
+	height: 150%;
+	width: 100%;
+	top: -25%;
+	position: relative;
+	z-index: 2;
+}
+
+.arrows-carousel {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 3;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-transition: 200ms;
+	transition: 200ms;
+	-webkit-filter: opacity(0.2);
+	filter: opacity(0.2);
 }
 
-.dot-mob {
-	height: 15px;
-	width: 15px;
-	border-radius: 100%;
-	margin: 0px auto;
-	border: 1px solid var(--theme-color);
+#left-arrow img {
+	margin: auto 20px;
+	height: 50px;
+	width: 50px;
+	-webkit-filter: invert(1);
+	filter: invert(1);
+	-webkit-transform: rotateZ(90deg);
+	transform: rotateZ(90deg)
 }
 
-.active-dot-mob {
-	background: var(--theme-color);
+#right-arrow img {
+	margin: auto 20px auto auto;
+	height: 50px;
+	width: 50px;
+	-webkit-filter: invert(1);
+	filter: invert(1);
+	-webkit-transform: rotateZ(-90deg);
+	transform: rotateZ(-90deg);
+}
+
+#left-arrow {
+	right: 80%;
+	left: 0;
+	background: -webkit-gradient(linear, right top, left top, from(transparent), to(rgba(0, 0, 0, 0.3)));
+	background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.3));
+}
+
+#right-arrow {
+	left: 80%;
+	right: 0;
+	background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(0, 0, 0, 0.3)));
+	background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.3));
+}
+
+.arrows-carousel:hover {
+	-webkit-filter: opacity(1);
+	filter: opacity(1);
+}
+
+#carousel-indicators {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	height: 10%;
+	width: 30%;
+	margin: auto;
+	z-index: 5;
+}
+
+
+.item-li {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	margin: 0 3%;
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius: 50px;
+	list-style-type: none;
+}
+
+.item-li:first-child {
+	margin-left: -8%;
+}
+
+.active-slider {
+	background-color: var(--theme-color)!important;
+}
+
+#gradient-caption {
+	position: absolute;
+	height: 20%;
+	top: 80%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 4;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+#gradient-caption span {
+	margin: 3% auto 0% auto;
+	color: white;
+	font-family: 'Julius Sans One', sans-serif;
+}
+
+#gradient-caption span::before {
+	content: "Cozinha";
 }
